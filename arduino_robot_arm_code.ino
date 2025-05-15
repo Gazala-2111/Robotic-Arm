@@ -1,33 +1,5 @@
-/******************************************************************************
-  Author: Smartbuilds.io
-  YouTube: https://www.youtube.com/channel/UCGxwyXJWEarxh2XWqvygiIg
-  Fork your own version: https://github.com/EbenKouao/arduino-robot-arm
-  Check out the full article: https://smartbuilds.io/diy-arduino-robot-arm-controlled-hand-gestures/
-  Date: 06/01/2021
-  Robot Arm
-  Version 1.0
-  Creator: smartbuilds.io
-  Description: Robotic Arm Mark II - Servo Motor
-
-  To use the module connect it to your Arduino as follows:
-
-  PCA9685...........Uno/Nano
-  GND...............GND
-  OE................N/A
-  SCL...............A5
-  SDA...............A4
-  VCC...............5V
-
-******************************************************************************/
-
-/* Include the HCPCA9685 library */
 #include "HCPCA9685.h"
-
-/* I2C slave address for the device/module. For the HCMODU0097 the default I2C address
-   is 0x40 */
 #define  I2CAdd 0x40
-
-/* Create an instance of the library */
 HCPCA9685 HCPCA9685(I2CAdd);
 
 //initial parking position of the motor
@@ -115,8 +87,7 @@ void setup()
 
 
   delay(3000);
-  //wakeUp(); -- Uncomment for Example Demo 1
-  //flexMotors(); -- Uncomment for Example Demo 1
+ 
 
 }
 
